@@ -1,33 +1,25 @@
 /**
- * @author Jigar Khalas 
- * @description Category Model 
+ * @author Jigar Khalas
+ * @description Category Model
  */
 
 import mongoose from "mongoose";
 
 const CategorySchema = new mongoose.Schema({
-    
-    name : {
-        type : String , 
-        required : true , 
-        trim : true , 
-    } , 
+  name: {
+    type: String,
+    required: true,
+    trim: true,
+  },
 
-    code : {
-        type : String , 
-        required : true , 
-        trim : true , 
-        unique : true 
-    } , 
+  code: {
+    type: String,
+    required: true,
+    trim: true,
+    unique: true,
+  },
+});
 
-    image : {
-        type : String , 
-        required : true , 
-        trim : true 
-    }
-
-})
-
-const CategoryModel = mongoose.model("Category",CategorySchema);
+const CategoryModel = mongoose.model("Category", CategorySchema);
 
 export default CategoryModel;

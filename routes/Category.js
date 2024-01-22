@@ -1,20 +1,43 @@
 /**
- * @author Jigar Khalas 
+ * @author Jigar Khalas
  * @description It contains all routes for Category Collection.
  */
 
-import express from "express"; 
+import express from "express";
 
-import categorySchemaMiddleware from "../middlewares/Category.js";
+import {
+  categorySchemaMiddleware,
+  categoryDeleteMiddleware,
+  categoryUpdateMiddleware,
+} from "../middlewares/Category.js";
 
 import CategoryController from "../controllers/CategoryController.js";
 
 import { verifyUser } from "../middlewares/User.js";
 
-const router = express.Router(); 
+const router = express.Router();
 
-router.post("/add",categorySchemaMiddleware,verifyUser,CategoryController.addCategory);
+router.post(
+  "/add",
+  categorySchemaMiddleware,
+  verifyUser,
+  CategoryController.addCategory
+);
 
-router.get("/display",verifyUser,CategoryController.displayCategory);
+router.get("/display", verifyUser, CategoryController.displayCategory);
 
-export default router ; 
+router.delete(
+  "/delete",
+  categoryDeleteMiddleware,
+  verifyUser,
+  CategoryController.deleteCategory
+);
+
+router.put(
+  "/update",
+  categoryUpdateMiddleware,
+  verifyUser,
+  CategoryController.updateCategory
+);
+
+export default router;
