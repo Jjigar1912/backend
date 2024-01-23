@@ -5,15 +5,11 @@
 
 import express from "express";
 
-<<<<<<< HEAD
-import { categorySchemaMiddleware , categoryDeleteMiddleware , categoryUpdateMiddleware } from "../middlewares/Category.js";
-=======
 import {
   categorySchemaMiddleware,
   categoryDeleteMiddleware,
   categoryUpdateMiddleware,
 } from "../middlewares/Category.js";
->>>>>>> 2b178facd9ac08563639ffb4629fbfbfa46f492a
 
 import CategoryController from "../controllers/CategoryController.js";
 
@@ -29,13 +25,6 @@ router.post(
 );
 
 router.get("/display", verifyUser, CategoryController.displayCategory);
-<<<<<<< HEAD
-
-router.delete("/delete",categoryDeleteMiddleware,verifyUser,CategoryController.deleteCategory);
-
-router.put("/update",categoryUpdateMiddleware,verifyUser,CategoryController.updateCategory);
-=======
->>>>>>> 2b178facd9ac08563639ffb4629fbfbfa46f492a
 
 router.delete(
   "/delete",
