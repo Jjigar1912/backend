@@ -6,13 +6,19 @@
 import express from "express";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { categorySchemaMiddleware , categoryDeleteMiddleware , categoryUpdateMiddleware } from "../middlewares/Category.js";
 =======
+=======
+>>>>>>> 2b178facd9ac08563639ffb4629fbfbfa46f492a
 import {
   categorySchemaMiddleware,
   categoryDeleteMiddleware,
   categoryUpdateMiddleware,
 } from "../middlewares/Category.js";
+<<<<<<< HEAD
+>>>>>>> 2b178facd9ac08563639ffb4629fbfbfa46f492a
+=======
 >>>>>>> 2b178facd9ac08563639ffb4629fbfbfa46f492a
 
 import CategoryController from "../controllers/CategoryController.js";
@@ -30,6 +36,7 @@ router.post(
 
 router.get("/display", verifyUser, CategoryController.displayCategory);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 router.delete("/delete",categoryDeleteMiddleware,verifyUser,CategoryController.deleteCategory);
 
@@ -37,6 +44,9 @@ router.put("/update",categoryUpdateMiddleware,verifyUser,CategoryController.upda
 =======
 >>>>>>> 2b178facd9ac08563639ffb4629fbfbfa46f492a
 
+=======
+
+>>>>>>> 2b178facd9ac08563639ffb4629fbfbfa46f492a
 router.delete(
   "/delete",
   categoryDeleteMiddleware,

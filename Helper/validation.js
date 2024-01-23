@@ -27,6 +27,7 @@ const loginSchema = joi.object({
 
 const restaurantSchema = joi.object({
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     name : joi.string().trim().min(3).required() , 
     email : joi.string().trim().email().required() , 
@@ -42,6 +43,8 @@ const restaurantSchema = joi.object({
 
 })
 =======
+=======
+>>>>>>> 2b178facd9ac08563639ffb4629fbfbfa46f492a
   name: joi.string().trim().min(3).required(),
   email: joi.string().trim().email().required(),
   contact: joi
@@ -58,6 +61,7 @@ const restaurantSchema = joi.object({
   longitude: joi.number().min(-180).max(180).required(),
   logo: joi.string().trim().required(),
 });
+<<<<<<< HEAD
 >>>>>>> 2b178facd9ac08563639ffb4629fbfbfa46f492a
 
 const categorySchema = joi.object({
@@ -137,10 +141,26 @@ const foodSchema = joi.object({
     category_id : joi.string().trim().required() , 
     cusin_id : joi.string().trim().required() , 
     brand_id :  joi.string().trim().required() 
+=======
 
-})
+const categorySchema = joi.object({
+  name: joi.string().trim().min(3).required(),
+  image: joi.string().trim().required(),
+});
+
+const categoryDeleteSchema = joi.object({
+  category_id: joi.string().trim().min(5).required(),
+});
+>>>>>>> 2b178facd9ac08563639ffb4629fbfbfa46f492a
+
+const categoryUpdateSchema = joi.object({
+  category_id: joi.string().trim().min(5).required(),
+  name: joi.string().trim().required(),
+  image: joi.string().trim().required(),
+});
 
 export {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     UserSchema , 
@@ -159,6 +179,8 @@ export {
     
 } ; 
 =======
+=======
+>>>>>>> 2b178facd9ac08563639ffb4629fbfbfa46f492a
   UserSchema,
   loginSchema,
   restaurantSchema,
@@ -166,4 +188,7 @@ export {
   categoryDeleteSchema,
   categoryUpdateSchema,
 };
+<<<<<<< HEAD
+>>>>>>> 2b178facd9ac08563639ffb4629fbfbfa46f492a
+=======
 >>>>>>> 2b178facd9ac08563639ffb4629fbfbfa46f492a
