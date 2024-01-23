@@ -26,22 +26,6 @@ const loginSchema = joi.object({
 });
 
 const restaurantSchema = joi.object({
-<<<<<<< HEAD
-
-    name : joi.string().trim().min(3).required() , 
-    email : joi.string().trim().email().required() , 
-    contact : joi.string().min(10).max(10).custom(CustomRegex.isContactNumber).required() , 
-    state : joi.string().trim().min(3).required(), 
-    city : joi.string().trim().min(3).required(), 
-    country : joi.string().trim().min(3).required(), 
-    address : joi.string().trim().min(5).required() , 
-    latitude: joi.number().min(-90).max(90).required(),
-    longitude: joi.number().min(-180).max(180).required(),
-    logo : joi.string().trim().required() , 
-    rating : joi.number().required()
-
-})
-=======
   name: joi.string().trim().min(3).required(),
   email: joi.string().trim().email().required(),
   contact: joi
@@ -58,7 +42,6 @@ const restaurantSchema = joi.object({
   longitude: joi.number().min(-180).max(180).required(),
   logo: joi.string().trim().required(),
 });
->>>>>>> 2b178facd9ac08563639ffb4629fbfbfa46f492a
 
 const categorySchema = joi.object({
   name: joi.string().trim().min(3).required(),
@@ -119,41 +102,31 @@ const cusinUpdateSchema = joi.object({
 
 const foodSchema = joi.object({
 
-    name : joi.string().trim().required() , 
-    price : joi.string().trim().required() , 
-    description : joi.string().trim().required() , 
-    foodImage : joi.array().items(joi.string().trim()).required() , 
-    rating : joi.string().trim().required() , 
-    category_id : joi.string().trim().required() , 
-    cusin_id : joi.string().trim().required() , 
-    brand_id :  joi.string().trim().required() 
+  name: joi.string().trim().required(),
+  price: joi.string().trim().required(),
+  description: joi.string().trim().required(),
+  foodImage: joi.array().items(joi.string().trim()).required(),
+  rating: joi.string().trim().required(),
+  category_id: joi.string().trim().required(),
+  cusin_id: joi.string().trim().required(),
+  brand_id: joi.string().trim().required()
 
 })
 
 export {
-<<<<<<< HEAD
 
-    UserSchema , 
-    loginSchema , 
-    restaurantSchema , 
-    categorySchema , 
-    categoryDeleteSchema , 
-    categoryUpdateSchema , 
-    addBrandSchema ,
-    removeBrandSchema , 
-    updateBrandSchema ,
-    cusinSchema , 
-    cusinDeleteSchema,
-    cusinUpdateSchema , 
-    foodSchema
-    
-} ; 
-=======
   UserSchema,
   loginSchema,
   restaurantSchema,
   categorySchema,
   categoryDeleteSchema,
   categoryUpdateSchema,
+  addBrandSchema,
+  removeBrandSchema,
+  updateBrandSchema,
+  cusinSchema,
+  cusinDeleteSchema,
+  cusinUpdateSchema,
+  foodSchema
+
 };
->>>>>>> 2b178facd9ac08563639ffb4629fbfbfa46f492a
