@@ -15,8 +15,9 @@ class FoodController
             
             const { restaurant_id } = await User_restaurant_model.findOne({ user_id : req.body.user_id }) ; 
 
-            res.send("done");
             
+            res.send("done");
+
         }catch(error){
             
             console.log(error);
