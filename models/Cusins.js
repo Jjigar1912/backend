@@ -10,14 +10,15 @@ const CusinsSchema = new mongoose.Schema({
     name : {
         type : String , 
         required : true , 
-        trim : true 
+        trim : true , 
+        unique : true 
     } , 
 
     code : {
-        type : mongoose.Schema.Types.ObjectId , 
+        type : String , 
         required : true ,
         trim : true 
-    }
+    } 
 
 })
 

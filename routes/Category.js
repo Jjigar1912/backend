@@ -5,7 +5,7 @@
 
 import express from "express"; 
 
-import categorySchemaMiddleware from "../middlewares/Category.js";
+import { categorySchemaMiddleware , categoryDeleteMiddleware , categoryUpdateMiddleware } from "../middlewares/Category.js";
 
 import CategoryController from "../controllers/CategoryController.js";
 
@@ -15,6 +15,10 @@ const router = express.Router();
 
 router.post("/add",categorySchemaMiddleware,verifyUser,CategoryController.addCategory);
 
-router.get("/display",verifyUser,CategoryController.displayCategory);
+router.get("/display", verifyUser, CategoryController.displayCategory);
+
+router.delete("/delete",categoryDeleteMiddleware,verifyUser,CategoryController.deleteCategory);
+
+router.put("/update",categoryUpdateMiddleware,verifyUser,CategoryController.updateCategory);
 
 export default router ; 

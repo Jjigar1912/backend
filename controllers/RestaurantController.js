@@ -26,12 +26,11 @@ class RestaurantController
                 location : {
                     type : "Point" , 
                     coordinates : [longitude,latitude]
-                }
+                } , 
+                rating : request.body.rating 
             });
 
             const data = await newRecord.save(); 
-
-            console.log(data._id)
 
             const newInsert = new User_restaurant_model({
                 restaurant_id : data._id , 

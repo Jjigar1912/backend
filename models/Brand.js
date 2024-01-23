@@ -15,10 +15,16 @@ const BrandSchema = new mongoose.Schema({
     } , 
 
     code : {
-        type : mongoose.Schema.Types.ObjectId, 
+        type : String, 
         required : true , 
         trim : true , 
         unique : true 
+    } , 
+
+    logo : {
+        type : String , 
+        required : true , 
+        trim : true 
     }
 
 })
